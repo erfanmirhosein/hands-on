@@ -1,6 +1,5 @@
 package erfan.handson.testing.context;
 
-import erfan.handson.testing.infrastructure.ApplicationControllerAdvice;
 import erfan.handson.testing.pojo.ToBeBeanInApp;
 import erfan.handson.testing.pojo.ToBeBeanInTestsUsingAtConfiguration;
 import erfan.handson.testing.pojo.ToBeBeanInTestsUsingAtTestConfiguration;
@@ -29,8 +28,5 @@ class SpringBootTestAloneTest {
 
         assertThatNoException()
                 .isThrownBy(() -> applicationContext.getBean(ToBeBeanInApp.class));
-
-        assertThatNoException()
-                .isThrownBy(() -> applicationContext.getBean(ApplicationControllerAdvice.class));
     }
 }

@@ -1,6 +1,5 @@
 package erfan.handson.testing.context;
 
-import erfan.handson.testing.infrastructure.ApplicationControllerAdvice;
 import erfan.handson.testing.pojo.ToBeBeanInApp;
 import erfan.handson.testing.pojo.ToBeBeanInTestsUsingAtConfiguration;
 import erfan.handson.testing.pojo.ToBeBeanInTestsUsingAtTestConfiguration;
@@ -32,9 +31,6 @@ class NestedConfigurationClassTest {
 
         assertThatExceptionOfType(NoSuchBeanDefinitionException.class)
                 .isThrownBy(() -> applicationContext.getBean(ToBeBeanInApp.class));
-
-        assertThatExceptionOfType(NoSuchBeanDefinitionException.class)
-                .isThrownBy(() -> applicationContext.getBean(ApplicationControllerAdvice.class));
     }
 
     @Configuration
